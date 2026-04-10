@@ -41,10 +41,42 @@ public class Producto {
     }
 
     public void aplicarDescuento (double descuento) {
+        descuento=1-(descuento/100);
+
+        System.out.println("Precio Base sin descuento: " + getPrecioBase());
         setPrecioBase(getPrecioBase()*descuento);
+        System.out.println("Precio Base con descuento " + getPrecioBase());
     }
 
-    public void aplicarDescuento (double descuento, double precioMinimo)
+    public void aplicarDescuento (double descuento, double precioMinimo){
+        descuento=1-(descuento/100);
+        System.out.println("Precio Base sin descuento: " + getPrecioBase());
+
+        if ((getPrecioBase()*descuento)<precioMinimo) {
+            System.out.println("El descuento no puede exceder el precio minimo");
+        }else{
+            System.out.println("Descuento aplicado exitosamente");
+            System.out.println("Precio Base CON descuento: " + getPrecioBase()*descuento);
+            setPrecioBase(getPrecioBase()*descuento);
+        }
+    }
+
+    public double calcularPrecioFinal () {
+        double IVAaux=1+(IVA/100);
+        return precioBase*IVAaux;
+    }
+
+    public static void cambiarIVA (double nuevo) {
+        nuevo=nuevo/100;
+        Producto.IVA = nuevo;
+    }
+
+    public String toString(){
+        return "Producto: " + getNombre() + "\n" +
+                "Precio Base: " + getPrecioBase() + "\n" +
+                "IVA aplicable: " + (getIVA()*100) + "%\n" +
+                "Precio Final: " + this.calcularPrecioFinal();
+    }
 
     
 

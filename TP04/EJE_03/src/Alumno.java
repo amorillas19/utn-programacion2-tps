@@ -61,7 +61,7 @@ public class Alumno {
         }
     }
 
-    public static cambiarNotaAProbacion (double nueva){
+    public static void cambiarNotaAProbacion (double nueva){
         Alumno.notaAprobacion=nueva;
     }
 
