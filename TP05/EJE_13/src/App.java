@@ -1,5 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        Usuario u1 = new Usuario("Juan Carlos", "jc@gmail.com");
+        GeneradorQR generador = new GeneradorQR();
+
+        generador.generar("hamburguesa", u1);
+
     }
 }
