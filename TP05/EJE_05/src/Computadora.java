@@ -45,6 +45,10 @@ public class Computadora {
 
     public void setPropietario(Propietario propietario) {
         this.propietario=propietario;
+
+        //Esto es un check para asignar aca mismo en la bidireccion
+        //Lo repetis en la otra punta asi seteas ambos al mismo tiempo
+        //(el propietario.getcompu !=this se encarga de esto)
         if (propietario != null && propietario.getComputadora() != this) {
             propietario.setComputadora(this);
         }
