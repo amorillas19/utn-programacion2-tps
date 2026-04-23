@@ -4,8 +4,8 @@ public class Libro {
     private static String editorial = "Independiente";
 
     Libro(String titulo, String autor){
-        this.titulo=titulo;
-        this.autor=autor;
+        setTitulo(titulo);
+        setAutor(autor);
     }
 
     //Si EDITORIAL es constante, no deberia modificarse en cada instancia
@@ -38,7 +38,7 @@ public class Libro {
         this.autor = autor;
     }
 
-    public String getEditorial(){
+    public static String getEditorial(){
         return Libro.editorial;
     }
 

@@ -5,7 +5,7 @@ public class Alumno {
 
     public Alumno (String nombre, double promedio){
         this.nombre = nombre;
-        this.promedio = promedio;
+        setPromedio(promedio);
     }
 
     public Alumno (String nombre){
@@ -17,7 +17,12 @@ public class Alumno {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre != null && !nombre.isEmpty()) {
+            this.nombre = nombre;
+        }else{
+            System.out.println("Nombre invalido");
+            return;
+        }
     }
 
     public double getPromedio() {
