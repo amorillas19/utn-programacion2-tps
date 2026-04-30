@@ -2,11 +2,12 @@ public class TarjetaDeCredito {
     private int numero;
     private int fechaVencimiento;
     private Banco banco;
-    private Cliente cliente;
+    private ClienteTarjeta clienteTarjeta;
 
-    public TarjetaDeCredito(int numero, int fechaVencimiento) {
+    public TarjetaDeCredito(int numero, int fechaVencimiento, Banco banco) {
         this.numero = numero;
         this.fechaVencimiento = fechaVencimiento;
+        this.banco = banco;
     }
     public int getNumero() {
         return numero;
@@ -26,19 +27,19 @@ public class TarjetaDeCredito {
     public void setBanco(Banco banco) {
         this.banco = banco;
     }
-    public Cliente getCliente() {
-        return cliente;
+    public ClienteTarjeta getCliente() {
+        return clienteTarjeta;
     }
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-        if (cliente != null && cliente.getTarjetaDeCredito() != this) {
-            cliente.setTarjetaDeCredito(this);
+    public void setClienteTarjeta(ClienteTarjeta clienteTarjeta) {
+        this.clienteTarjeta = clienteTarjeta;
+        if (clienteTarjeta != null && clienteTarjeta.getTarjetaDeCredito() != this) {
+            clienteTarjeta.setTarjetaDeCredito(this);
         }
     }
     @Override
     public String toString() {
         return "TarjetaDeCredito [numero=" + numero + ", fechaVencimiento=" + fechaVencimiento + ", banco=" + banco
-                + ", cliente=" + cliente.getNombre() + "]";
+                + ", cliente=" + clienteTarjeta.getNombre() + "]";
     }
 
     

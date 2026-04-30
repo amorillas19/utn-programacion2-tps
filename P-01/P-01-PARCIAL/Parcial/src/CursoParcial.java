@@ -1,11 +1,11 @@
-public class Curso {
+public class CursoParcial {
     private final int id;
     private String nombre;
     private int duracionHoras;
     private double precio;
     private static int totalCursos = 0;
 
-    public Curso (String nombre, int duracionhoras, double precio){
+    public CursoParcial (String nombre, int duracionhoras, double precio){
         this.id=totalCursos++;
         setNombre(nombre);
         setDuracionHoras(duracionhoras);
@@ -13,7 +13,7 @@ public class Curso {
         
     }
 
-    public Curso (String nombre, int duracionhoras){
+    public CursoParcial (String nombre, int duracionhoras){
         this.id=totalCursos++;
         setNombre(nombre);
         setDuracionHoras(duracionhoras);

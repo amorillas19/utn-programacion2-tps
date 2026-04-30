@@ -1,9 +1,9 @@
-public class Cliente {
+public class ClienteTarjeta {
     private String nombre;
     private int DNI;
     private TarjetaDeCredito tarjetaDeCredito;
 
-    public Cliente(String nombre, int DNI) {
+    public ClienteTarjeta(String nombre, int DNI) {
         this.nombre = nombre;
         this.DNI = DNI;
     }
@@ -20,8 +20,8 @@ public class Cliente {
         return DNI;
     }
 
-    public void setDNI(int dNI) {
-        DNI = dNI;
+    public void setDNI(int DNI) {
+        this.DNI = DNI;
     }
 
     public TarjetaDeCredito getTarjetaDeCredito() {
@@ -31,7 +31,7 @@ public class Cliente {
     public void setTarjetaDeCredito(TarjetaDeCredito tarjetaDeCredito) {
         this.tarjetaDeCredito = tarjetaDeCredito;
         if (tarjetaDeCredito != null && tarjetaDeCredito.getCliente() != this) {
-            tarjetaDeCredito.setCliente(this);
+            tarjetaDeCredito.setClienteTarjeta(this);
         }
     }
 

@@ -35,9 +35,10 @@ public class MatrizApp {
             matriz [i] [auxNum-i] = random.nextInt(100)+1;
         }
 
-        
-
-        
-        System.out.println("EL numero es: " + numFinal);
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                System.out.println(matriz [i] [j]);
+            }
+        }
     }
 }

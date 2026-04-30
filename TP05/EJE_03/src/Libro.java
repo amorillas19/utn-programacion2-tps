@@ -4,9 +4,11 @@ public class Libro {
     private Autor autor;
     private Editorial editorial;
 
-    public Libro(String titulo, int iSBN) {
+    //SI HAY AGREGACION DEBE PASARSE EN EL CONSTRUCTOR
+    public Libro(String titulo, int ISBN, Editorial editorial) {
         this.titulo = titulo;
-        ISBN = iSBN;
+        this.ISBN = ISBN;
+        this.editorial = editorial;
     }
 
     public String getTitulo() {

@@ -5,7 +5,7 @@ public class App {
         //Asociacion unidireccional "conoce a"
         Autor a1 = new Autor("GRRM", "Ingles");
         Editorial e1 = new Editorial("Penguin House", "Av. Siempre viva 123");
-        Libro l1 = new Libro("Danza de Dragones", 12345);
+        Libro l1 = new Libro("Danza de Dragones", 12345, e1);
         
         System.out.println(l1);
         l1.setAutor(a1);

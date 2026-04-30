@@ -5,6 +5,7 @@ public class Celular {
     private Bateria bateria;
     private Usuario usuario;
 
+    //LA AGREGACION DE LA BATERIA IMPLICA QUE PASE POR CREADOR
     public Celular (int imei, String marca, String modelo, Bateria bateria) {
         this.imei=imei;
         this.marca=marca;
