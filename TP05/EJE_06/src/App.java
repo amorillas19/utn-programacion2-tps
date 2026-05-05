@@ -4,7 +4,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         
-        ClienteTarjeta c1 = new ClienteTarjeta("Juan", 4297555);
+        ClienteMesa c1 = new ClienteMesa("Juan", 4297555);
         Mesa m1 = new Mesa(5, 4);
         Date hoy = new Date(2026,4,28);
         //Le pasamos mesa por agregacion

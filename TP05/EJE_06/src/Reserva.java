@@ -3,7 +3,7 @@ import java.util.Date;
 public class Reserva {
     private Date fecha;
     private int hora;
-    private ClienteTarjeta cliente;
+    private ClienteMesa clienteMesa;
     private Mesa mesa;
 
     //Agregacion implica que exista en su constructor
@@ -29,12 +29,12 @@ public class Reserva {
         this.hora = hora;
     }
 
-    public ClienteTarjeta getCliente() {
-        return cliente;
+    public ClienteMesa getCliente() {
+        return clienteMesa;
     }
 
-    public void setCliente(ClienteTarjeta cliente) {
-        this.cliente = cliente;
+    public void setCliente(ClienteMesa cliente) {
+        this.clienteMesa = cliente;
     }
 
     public Mesa getMesa() {
@@ -47,7 +47,7 @@ public class Reserva {
 
     @Override
     public String toString() {
-        return "Reserva [fecha=" + fecha + ", hora=" + hora + ", cliente=" + cliente + ", mesa=" + mesa + "]";
+        return "Reserva [fecha=" + fecha + ", hora=" + hora + ", cliente=" + clienteMesa + ", mesa=" + mesa + "]";
     }
 
     

@@ -1,8 +1,8 @@
-public class Cliente {
+public class ClienteMesa {
     private String nombre;
     private int telefono;
     
-    public Cliente(String nombre, int telefono) {
+    public ClienteMesa(String nombre, int telefono) {
         this.nombre = nombre;
         this.telefono = telefono;
     }
